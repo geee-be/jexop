@@ -1,0 +1,24 @@
+{
+  "name": "@jexop/date-time",
+  "version": "1.0.0",
+  "description": "",
+  "keywords": [],
+  "license": "MIT",
+  "author": "Greg Bacchus",
+  "type": "module",
+  "main": "dist/cjs/index.js",
+  "modules": "dist/esm/index.js",
+  "types": "src/index.ts",
+  "scripts": {
+    "build": "rimraf dist/*; tsc -b ./tsconfig.cjs.json ./tsconfig.esm.json && mv dist/cjs/index.js dist/cjs/index.cjs && mv dist/esm/index.js dist/esm/index.mjs;",
+    "lint": "npm run lint:eslint && npm run lint:types && npm run lint:unused-exports",
+    "lint:eslint": "eslint src/ --ext .ts,.tsx",
+    "lint:types": "tsc --noEmit",
+    "lint:unused-exports": "ts-unused-exports tsconfig.json --excludePathsFromReport=src/index.ts",
+    "start:dev": "rimraf dist/*; tsc --watch"
+  },
+  "dependencies": {
+    "@jexop/core": "workspace:1.0.0",
+    "luxon": "^3.4.0"
+  }
+}

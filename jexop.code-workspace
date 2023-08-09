@@ -1,0 +1,88 @@
+{
+  "folders": [
+    {
+      "name": ".root",
+      "path": ".root"
+    },
+    {
+      "name": "core",
+      "path": "packages/@jexop/core"
+    },
+    {
+      "name": "evaluate",
+      "path": "packages/@jexop/evaluate"
+    },
+    {
+      "name": "operators",
+      "path": "packages/@jexop/operators"
+    },
+    {
+      "name": "color",
+      "path": "packages/@jexop/color"
+    },
+    {
+      "name": "date-time",
+      "path": "packages/@jexop/date-time"
+    }
+  ],
+  "settings": {
+    "editor.codeActionsOnSave": {
+      "source.fixAll": true,
+      "source.organizeImports": true
+    },
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2,
+    "eslint.codeAction.disableRuleComment": {
+      "enable": true,
+      "location": "separateLine"
+    },
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[typescript]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[typescriptreact]": {
+      "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "files.associations": {},
+    "files.exclude": {
+      "**/.DS_Store": true,
+      "**/.git": true,
+      "**/.rush": true,
+      "**/.vscode": true,
+      "**/node_modules": true,
+      "dist": true
+    },
+    "files.insertFinalNewline": true,
+    "files.trimTrailingWhitespace": true,
+    "javascript.preferences.quoteStyle": "single",
+    "peacock.affectAccentBorders": true,
+    "peacock.affectActivityBar": true,
+    "peacock.affectStatusBar": true,
+    "peacock.affectTabActiveBorder": true,
+    "peacock.affectTitleBar": true,
+    "peacock.color": "#927104",
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBraces": true,
+    "typescript.preferences.quoteStyle": "single",
+    "workbench.colorCustomizations": {
+      "activityBar.activeBackground": "#c49705",
+      "activityBar.activeBorder": "#02fd51",
+      "activityBar.background": "#c49705",
+      "activityBar.foreground": "#15202b",
+      "activityBar.inactiveForeground": "#15202b99",
+      "activityBarBadge.background": "#45facf",
+      "activityBarBadge.foreground": "#15202b",
+      "statusBar.background": "#927104",
+      "statusBar.foreground": "#e7e7e7",
+      "statusBarItem.hoverBackground": "#c49705",
+      "statusBarItem.remoteBackground": "#927104",
+      "statusBarItem.remoteForeground": "#e7e7e7",
+      "tab.activeBorder": "#c49705",
+      "titleBar.activeBackground": "#927104",
+      "titleBar.activeForeground": "#e7e7e7",
+      "titleBar.inactiveBackground": "#92710499",
+      "titleBar.inactiveForeground": "#e7e7e799",
+      "sash.hoverBorder": "#c49705",
+      "commandCenter.border": "#e7e7e799"
+    }
+  }
+}
