@@ -6,7 +6,7 @@ Adds two numbers.
 
 | Property | Description |
 | -------- | ----------- |
-| `a`      | Addend      |
+| `a`      | Augend      |
 | `b`      | Addend      |
 
 Computes `a` + `b`.
@@ -158,10 +158,10 @@ Returns `true` if the `value` is a number. Otherwise, returns `false`.
 
 Multiplies two numbers.
 
-| Property | Description |
-| -------- | ----------- |
-| `left`   | Factor      |
-| `right`  | Factor      |
+| Property | Description  |
+| -------- | ------------ |
+| `left`   | Multiplier   |
+| `right`  | Multiplicand |
 
 Computes `left` × `right`
 
