@@ -9,14 +9,6 @@
       "path": "packages/@jexop/core"
     },
     {
-      "name": "evaluate",
-      "path": "packages/@jexop/evaluate"
-    },
-    {
-      "name": "operators",
-      "path": "packages/@jexop/operators"
-    },
-    {
       "name": "color",
       "path": "packages/@jexop/color"
     },
@@ -47,10 +39,9 @@
     "files.exclude": {
       "**/.DS_Store": true,
       "**/.git": true,
-      "**/.rush": true,
       "**/.vscode": true,
       "**/node_modules": true,
-      "dist": true
+      "**/dist": true
     },
     "files.insertFinalNewline": true,
     "files.trimTrailingWhitespace": true,

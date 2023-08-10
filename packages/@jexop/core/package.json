@@ -17,6 +17,10 @@
     "lint:unused-exports": "ts-unused-exports tsconfig.json --excludePathsFromReport=src/index.ts",
     "start:dev": "rimraf dist/*; tsc --watch"
   },
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "lodash": "^4.17.21"
+  },
+  "devDependencies": {
+    "@types/lodash": "^4.14.196"
+  }
 }

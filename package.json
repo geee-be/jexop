@@ -11,7 +11,8 @@
     "changeset": "changeset",
     "lint": "pnpm --stream -r lint",
     "start": "pnpm --stream -r start",
-    "start:dev": "pnpm --stream --parallel -r start:dev"
+    "start:dev": "pnpm --stream --parallel -r start:dev",
+    "test": "pnpm --stream -r test"
   },
   "prettier": "@geee-be/prettier-config",
   "devDependencies": {

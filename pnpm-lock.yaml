@@ -78,7 +78,15 @@ importers:
         specifier: ^2.4.0
         version: 2.4.0
 
-  packages/@jexop/core: {}
+  packages/@jexop/core:
+    dependencies:
+      lodash:
+        specifier: ^4.17.21
+        version: 4.17.21
+    devDependencies:
+      '@types/lodash':
+        specifier: ^4.14.196
+        version: 4.14.196
 
   packages/@jexop/date-time:
     dependencies:
@@ -88,6 +96,10 @@ importers:
       luxon:
         specifier: ^3.4.0
         version: 3.4.0
+    devDependencies:
+      '@types/luxon':
+        specifier: ^3.3.1
+        version: 3.3.1
 
   packages/@jexop/evaluate:
     dependencies:
@@ -1150,6 +1162,10 @@ packages:
 
   /@types/lodash@4.14.196:
     resolution: {integrity: sha512-22y3o88f4a94mKljsZcanlNWPzO0uBsBdzLAngf2tp533LzZcQzb6+eZPJ+vCTt+bqF2XnvT9gejTLsAcJAJyQ==}
+    dev: true
+
+  /@types/luxon@3.3.1:
+    resolution: {integrity: sha512-XOS5nBcgEeP2PpcqJHjCWhUCAzGfXIU8ILOSLpx2FhxqMW9KdxgCGXNOEKGVBfveKtIpztHzKK5vSRVLyW/NqA==}
     dev: true
 
   /@types/minimist@1.2.2:
