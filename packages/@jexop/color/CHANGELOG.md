@@ -1,5 +1,13 @@
 # @jexop/color
 
+## 1.0.3
+
+### Patch Changes
+
+- 572bfed: Tweaking build
+- Updated dependencies [572bfed]
+  - @jexop/core@1.0.3
+
 ## 1.0.2
 
 ### Patch Changes
