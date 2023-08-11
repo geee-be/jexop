@@ -1,0 +1,9 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist/amd",
+    "target": "es5",
+    "module": "AMD",
+    "moduleResolution": "node"
+  }
+}
