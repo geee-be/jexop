@@ -1,6 +1,6 @@
 {
   "name": "@jexop/date-time",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "",
   "keywords": [],
   "license": "MIT",
@@ -18,7 +18,7 @@
     "start:dev": "rimraf dist/*; tsc --watch"
   },
   "dependencies": {
-    "@jexop/core": "workspace:1.0.0",
+    "@jexop/core": "workspace:1.0.1",
     "luxon": "^3.4.0"
   },
   "devDependencies": {
