@@ -6,14 +6,13 @@
   "license": "MIT",
   "author": "Greg Bacchus",
   "type": "module",
-  "main": "dist/amd/index.js",
-  "modules": "dist/esm/index.mjs",
-  "types": "src/index.ts",
   "exports": {
     "types": "./src/index.ts",
     "require": "./dist/cjs/index.cjs",
     "import": "./dist/esm/index.mjs"
   },
+  "main": "dist/amd/index.js",
+  "types": "src/index.ts",
   "scripts": {
     "build": "rimraf dist/*; tsc -b ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.umd.json && mv dist/cjs/index.js dist/cjs/index.cjs && mv dist/esm/index.js dist/esm/index.mjs;",
     "lint": "npm run lint:eslint && npm run lint:types && npm run lint:unused-exports",
