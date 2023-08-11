@@ -1,5 +1,11 @@
 # @jexop/core
 
+## 1.0.3
+
+### Patch Changes
+
+- 572bfed: Tweaking build
+
 ## 1.0.2
 
 ### Patch Changes
