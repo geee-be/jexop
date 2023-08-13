@@ -16,6 +16,7 @@ export const isPath = (value: unknown): value is string | (string | number)[] =>
 export const toNumber = (value: unknown): number | null => {
   if (value === null) return null;
   if (Array.isArray(value)) return value.length;
+
   const num = typeof value === 'number' ? value : Number(value);
   return isNumber(num) ? num : null;
 };
