@@ -1,5 +1,12 @@
 # @jexop/date-time
 
+## 1.0.6
+
+### Patch Changes
+
+- Updated dependencies [5673400]
+  - @jexop/core@1.0.6
+
 ## 1.0.5
 
 ### Patch Changes
