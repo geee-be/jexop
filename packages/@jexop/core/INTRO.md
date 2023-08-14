@@ -61,9 +61,9 @@ evaluate(expression); // => false
 
 ## Default Operators
 
-There are many basic operators provided in `@jexop/core`. These can be viewed at [Operators](https://github.com/geee-be/jexop/blob/master/packages/%40jexop/core/src/operators/README.md).
+Many basic operators are provided in `@jexop/core`.
 
-Other operators can be found at
+More operators can be found in
 
 - [@jexop/color](https://www.npmjs.com/package/@jexop/color) using dependency of [chroma-js](https://www.npmjs.com/package/chroma-js)
 - [@jexop/date-time](https://www.npmjs.com/package/@jexop/date-time) using dependency of [luxon](https://www.npmjs.com/package/luxon)

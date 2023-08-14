@@ -8,6 +8,7 @@
   "type": "module",
   "scripts": {
     "build": "pnpm --stream --parallel -r build",
+    "build:docs": "pnpm --stream --parallel -r build:docs",
     "changeset": "changeset",
     "lint": "pnpm --stream -r lint",
     "start": "pnpm --stream -r start",

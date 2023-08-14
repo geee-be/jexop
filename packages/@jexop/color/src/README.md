@@ -1,20 +1,6 @@
-# JSON Expression Color Operators
+# Color Operators
 
-## Basic Usage
-
-```typescript
-import { evaluate, registry } from '@jexop/core';
-import { colorOperators } from '@jexop/color';
-
-// register default operators
-registry.addDefaults();
-// register color operators
-registry.add(colorOperators);
-```
-
-## Operators
-
-### `color-range`
+## `color-range`
 
 Returns color from a gradient `from`-`to`
 
