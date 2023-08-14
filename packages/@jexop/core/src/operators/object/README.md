@@ -18,12 +18,13 @@ Examples
 }
 ```
 
-````jsonc
+```jsonc
 // given context = { "foo": "bar" }, returns "bar"
 {
   "op": "context",
   "path": "foo"
 }
+```
 
 ```jsonc
 // given context = { "foo": "bar" }, returns "this is the fallback"
@@ -32,7 +33,7 @@ Examples
   "path": "other",
   "default": "this is the fallback"
 }
-````
+```
 
 ## `get`
 
