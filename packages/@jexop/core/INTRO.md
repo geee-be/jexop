@@ -1,7 +1,6 @@
 # JSON Expression Operators
 
-Evaluate expressions with operators that are represented purely JSON objects. Completely
-extensible, giving ability to add or remove operators as required.
+Evaluate expressions with operators that are represented purely as JSON objects. Completely extensible, giving the ability to add or remove operators as required.
 
 ## Basic Usage
 
@@ -63,7 +62,7 @@ evaluate(expression); // => false
 
 Many basic operators are provided in `@jexop/core`.
 
-More operators can be found in
+More operators can be found in:
 
 - [@jexop/color](https://www.npmjs.com/package/@jexop/color) using dependency of [chroma-js](https://www.npmjs.com/package/chroma-js)
 - [@jexop/date-time](https://www.npmjs.com/package/@jexop/date-time) using dependency of [luxon](https://www.npmjs.com/package/luxon)
