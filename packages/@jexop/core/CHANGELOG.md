@@ -1,5 +1,11 @@
 # @jexop/core
 
+## 1.0.4
+
+### Patch Changes
+
+- 0eb7a19: Changed registry to Map based class
+
 ## 1.0.3
 
 ### Patch Changes
