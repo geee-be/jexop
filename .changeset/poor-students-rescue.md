@@ -1,5 +1,0 @@
----
-'@jexop/core': patch
----
-
-Readme
