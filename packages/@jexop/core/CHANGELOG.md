@@ -1,5 +1,12 @@
 # @jexop/core
 
+## 1.0.5
+
+### Patch Changes
+
+- 29bb4f5: Docs
+- 411a1ca: Readme
+
 ## 1.0.4
 
 ### Patch Changes

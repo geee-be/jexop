@@ -1,6 +1,6 @@
 {
   "name": "@jexop/color",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "keywords": [],
   "license": "MIT",
@@ -22,7 +22,7 @@
     "start:dev": "rimraf dist/*; tsc --watch"
   },
   "dependencies": {
-    "@jexop/core": "workspace:1.0.4",
+    "@jexop/core": "workspace:1.0.5",
     "chroma-js": "^2.4.2"
   },
   "devDependencies": {
