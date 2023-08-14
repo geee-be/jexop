@@ -1,7 +1,7 @@
 {
   "name": "@jexop/core",
   "version": "1.0.4",
-  "description": "",
+  "description": "Evaluate expressions with operators that are represented purely JSON objects",
   "keywords": [],
   "license": "MIT",
   "author": "Greg Bacchus",
