@@ -14,7 +14,7 @@ registry.addDefaults();
 const expression = {
   op: 'if',
   condition: {
-    op: '>'
+    op: '>',
     left: {
       op: 'context',
       path: 'x',
@@ -61,7 +61,7 @@ evaluate(expression); // => false
 
 ## Default Operators
 
-There are many basic operators provided in `@jexop/core`. These can be viewed at [Operators](./src/operators/README.md).
+There are many basic operators provided in `@jexop/core`. These can be viewed at [Operators](https://github.com/geee-be/jexop/blob/master/packages/%40jexop/core/src/operators/README.md).
 
 Other operators can be found at
 
