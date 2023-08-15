@@ -4,6 +4,7 @@
         "jexop",
         "luxon",
         "millis",
+        "pnpx",
         "prestart",
         "subdirs"
     ]
