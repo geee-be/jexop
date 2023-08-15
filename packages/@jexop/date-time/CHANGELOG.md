@@ -1,5 +1,14 @@
 # @jexop/date-time
 
+## 1.0.7
+
+### Patch Changes
+
+- 8773b1c: Fix packages
+- Updated dependencies [3e62010]
+- Updated dependencies [8773b1c]
+  - @jexop/core@1.0.7
+
 ## 1.0.6
 
 ### Patch Changes
