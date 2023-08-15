@@ -41,7 +41,7 @@ jobs:
         run: |
           pnpm -w lint
 
-      - name: Build packages
+      - name: Build docs
         shell: bash
         run: |
           pnpm -w build:docs
