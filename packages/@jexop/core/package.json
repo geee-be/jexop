@@ -20,7 +20,8 @@
     "lint:eslint": "eslint src/ --ext .ts,.tsx",
     "lint:types": "tsc --noEmit",
     "lint:unused-exports": "ts-unused-exports tsconfig.json --excludePathsFromReport=src/index.ts",
-    "start:dev": "rimraf dist/*; tsc --watch"
+    "start:dev": "rimraf dist/*; tsc --watch",
+    "test": "vitest"
   },
   "dependencies": {
     "lodash": "^4.17.21"

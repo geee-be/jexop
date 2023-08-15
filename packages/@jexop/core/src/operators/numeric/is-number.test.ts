@@ -1,12 +1,13 @@
+import { describe, expect, test } from 'vitest';
 import { isNumberOperator } from './is-number.js';
 
 describe('numeric', () => {
   describe('is-number', () => {
-    it('is true for number', () => {
+    test('is true for number', () => {
       expect(isNumberOperator({ value: 1 })).toBeTruthy();
     });
 
-    it('returns null for any non-numeric input', () => {
+    test('returns null for any non-numeric input', () => {
       expect(isNumberOperator({ value: 'foobar' })).toBeFalsy();
       expect(isNumberOperator({ value: { b: 2 } })).toBeFalsy();
       expect(isNumberOperator({ value: [1] })).toBeFalsy();

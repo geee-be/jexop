@@ -31,6 +31,11 @@ jobs:
         run: |
           pnpm -w build
 
+      - name: Run tests
+        shell: bash
+        run: |
+          pnpm -w test
+
       - name: Lint packages
         shell: bash
         run: |
