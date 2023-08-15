@@ -23,5 +23,6 @@ dist-ssr
 *.sw?
 
 # Built
+coverage
 packages/@jexop/*/README.md
 !packages/@jexop/*/src/*/README.md
