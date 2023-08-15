@@ -1,8 +1,9 @@
+import { describe, expect, test } from 'vitest';
 import { toDateTime } from './utils.js';
 
 describe('utils', () => {
   describe('toDateTime', () => {
-    it('positive cases', () => {
+    test('positive cases', () => {
       const date = new Date(1691629840655);
       expect(toDateTime(date)?.toMillis()).toBe(1691629840655);
       expect(toDateTime(1691629840655)?.toMillis()).toBe(1691629840655);
@@ -21,7 +22,7 @@ describe('utils', () => {
       ).toBe(1691629840655);
     });
 
-    it('negative cases', () => {
+    test('negative cases', () => {
       expect(toDateTime([1691629840655])).toBeNull();
       expect(toDateTime('f00 bar')).toBeNull();
     });
