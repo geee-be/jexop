@@ -1,5 +1,12 @@
 # @jexop/core
 
+## 1.0.7
+
+### Patch Changes
+
+- 3e62010: Run tests as part of build
+- 8773b1c: Fix packages
+
 ## 1.0.6
 
 ### Patch Changes
