@@ -9,6 +9,6 @@ export const toDateTime = (value: unknown): DateTime | null => {
   if (typeof value === 'number') return fix(DateTime.fromMillis(value));
   if (typeof value === 'string') return fix(DateTime.fromISO(value));
   if (Array.isArray(value)) return null;
-  if (typeof value === 'object') return fix(DateTime.fromObject(value));
+  if (typeof value === 'object') return fix(DateTime.fromObject(value, { zone: 'UTC' }));
   return null;
 };
