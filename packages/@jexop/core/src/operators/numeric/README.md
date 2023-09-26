@@ -168,20 +168,20 @@ Computes `left` × `right`
 Examples
 
 ```json
-// returns 5
+// returns 20
 {
-  "op": "divide",
+  "op": "multiply",
   "left": 10,
   "right": 2
 }
 ```
 
 ```json
-// returns 5
+// returns 2000
 {
-  "op": "/",
+  "op": "*",
   "left": {
-    "op": "divide",
+    "op": "multiply",
     "left": 100,
     "right": 2
   },
@@ -226,7 +226,7 @@ Examples
 ```json
 // returns 1
 {
-  "op": "clamp",
+  "op": "normalize",
   "min": -100,
   "max": 100,
   "value": {
