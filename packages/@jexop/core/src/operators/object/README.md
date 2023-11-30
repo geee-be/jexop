@@ -100,21 +100,21 @@ Examples
 }
 ```
 
-## `has`
+## `object:has`
 
 True if the input `object` has a property at the given `path`.
 
 | Property | Description            |
 | -------- | ---------------------- |
-| `path`   | Property path to check |
 | `object` | Input object           |
+| `path`   | Property path to check |
 
 Examples
 
 ```jsonc
 // returns true
 {
-  "op": "has",
+  "op": "object:has",
   "path": "foo.bar",
   "object": {
     "foo": {
@@ -127,7 +127,7 @@ Examples
 ```jsonc
 // returns true
 {
-  "op": "has",
+  "op": "object:has",
   "path": ["foo", "bar"],
   "object": {
     "foo": {
@@ -140,8 +140,43 @@ Examples
 ```jsonc
 // returns false
 {
-  "op": "has",
+  "op": "object:has",
   "path": "other",
+  "object": {
+    "foo": {
+      "bar": 17
+    }
+  }
+}
+```
+
+## `object:keys`
+
+Returns the object's keys as an array.
+
+| Property          | Description                          |
+| ----------------- | ------------------------------------ |
+| `object`          | Input object                         |
+| `path` (optional) | Evaluate child property at this path |
+
+Examples
+
+```jsonc
+// returns ["foo", "bar"]
+{
+  "op": "object:keys",
+  "object": {
+    "foo": 12,
+    "bar": 17
+  }
+}
+```
+
+```jsonc
+// returns ["bar"]
+{
+  "op": "object:keys",
+  "path": "foo",
   "object": {
     "foo": {
       "bar": 17

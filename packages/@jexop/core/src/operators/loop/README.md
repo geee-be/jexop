@@ -1,3 +1,3 @@
-# Object Operators
+# Loop Operators
 
 TODO
