@@ -1,5 +1,11 @@
 # @jexop/core
 
+## 1.0.8
+
+### Patch Changes
+
+- fe4f31e: Added operators array:map and object:keys; aliases has to object:has
+
 ## 1.0.7
 
 ### Patch Changes
