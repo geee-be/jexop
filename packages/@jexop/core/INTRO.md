@@ -93,3 +93,44 @@ Additionally, there are more operators available in the following packages:
 - **[@jexop/date-time](https://www.npmjs.com/package/@jexop/date-time):** This package provides date and time-related operators using the dependency of [luxon](https://www.npmjs.com/package/luxon).
 
 You can install and use these packages to access a wider range of operators for your expressions.
+
+## Literal properties and operator
+
+Any property value that is not an object will be considered a literal value. Arrays will have each item evaluated.
+
+Objects that have no `op` property will also be considered literal. Further to that there is a `literal` operator to ensure that the value is passed as-is. This may be useful
+for returning objects that have an `op` property that are not intended to be evaluated.
+
+### `literal`
+
+Returns `value` as-it, without evaluation.
+
+| Property           | Description                  |
+| ------------------ | ---------------------------- |
+| `value` (optional) | Literal value to be returned |
+
+Examples
+
+```jsonc
+{
+  "op": "literal",
+  "value": {
+    "op": "anything",
+    "foo": "bar"
+  }
+}
+```
+
+```jsonc
+{
+  "op": "literal",
+  "value": 17
+}
+```
+
+```jsonc
+{
+  "op": "literal",
+  "value": "could be anything"
+}
+```
