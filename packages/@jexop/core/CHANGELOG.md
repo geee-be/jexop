@@ -1,5 +1,12 @@
 # @jexop/core
 
+## 1.0.9
+
+### Patch Changes
+
+- b296844: Included array operators in docs
+- 25a6add: Added `and` and `or` operators; Fixed doco
+
 ## 1.0.8
 
 ### Patch Changes
