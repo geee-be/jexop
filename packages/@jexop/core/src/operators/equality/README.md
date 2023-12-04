@@ -6,8 +6,8 @@ Returns `true` if inputs are exactly equal. Otherwise, returns `false`.
 
 | Property | Description |
 | -------- | ----------- |
-| `left`   | Input       |
-| `right`  | Input       |
+| `a`      | Input       |
+| `b`      | Input       |
 
 Examples
 

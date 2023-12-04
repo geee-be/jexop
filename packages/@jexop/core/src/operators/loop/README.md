@@ -1,3 +1,0 @@
-# Loop Operators
-
-TODO
