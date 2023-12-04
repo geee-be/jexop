@@ -26,6 +26,11 @@ jobs:
           run_install: |
             - args: [--no-frozen-lockfile]
 
+      - name: Lint packages
+        shell: bash
+        run: |
+          pnpm -w lint
+
       - name: Build packages
         shell: bash
         run: |
@@ -35,11 +40,6 @@ jobs:
         shell: bash
         run: |
           pnpm -w test
-
-      - name: Lint packages
-        shell: bash
-        run: |
-          pnpm -w lint
 
       - name: Build docs
         shell: bash
