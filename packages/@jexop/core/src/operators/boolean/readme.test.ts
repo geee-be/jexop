@@ -12,7 +12,7 @@ describe('boolean', () => {
         values: [true, false],
       };
       const result = evaluateRegistry(registry, expression, {});
-      expect(result).toStrictEqual(false);
+      expect(result).toBe(false);
     });
 
     test('example 2', () => {
@@ -32,7 +32,38 @@ describe('boolean', () => {
         ],
       };
       const result = evaluateRegistry(registry, expression, {});
-      expect(result).toStrictEqual(true);
+      expect(result).toBe(true);
+    });
+  });
+
+  describe('nand', () => {
+    test('example 1', () => {
+      const expression = {
+        op: 'nand',
+        values: [true, false],
+      };
+      const result = evaluateRegistry(registry, expression, {});
+      expect(result).toBe(true);
+    });
+
+    test('example 2', () => {
+      const expression = {
+        op: 'nand',
+        values: [
+          true,
+          {
+            op: '=',
+            a: 100,
+            b: {
+              op: 'plus',
+              a: 1,
+              b: 99,
+            },
+          },
+        ],
+      };
+      const result = evaluateRegistry(registry, expression, {});
+      expect(result).toBe(false);
     });
   });
 
@@ -43,7 +74,7 @@ describe('boolean', () => {
         values: [true, false],
       };
       const result = evaluateRegistry(registry, expression, {});
-      expect(result).toStrictEqual(true);
+      expect(result).toBe(true);
     });
 
     test('example 2', () => {
@@ -63,7 +94,38 @@ describe('boolean', () => {
         ],
       };
       const result = evaluateRegistry(registry, expression, {});
-      expect(result).toStrictEqual(false);
+      expect(result).toBe(false);
+    });
+  });
+
+  describe('nor', () => {
+    test('example 1', () => {
+      const expression = {
+        op: 'nor',
+        values: [true, false],
+      };
+      const result = evaluateRegistry(registry, expression, {});
+      expect(result).toBe(false);
+    });
+
+    test('example 2', () => {
+      const expression = {
+        op: 'nor',
+        values: [
+          false,
+          {
+            op: '!=',
+            a: 100,
+            b: {
+              op: 'plus',
+              a: 1,
+              b: 99,
+            },
+          },
+        ],
+      };
+      const result = evaluateRegistry(registry, expression, {});
+      expect(result).toBe(true);
     });
   });
 });
