@@ -1,5 +1,11 @@
 # @jexop/core
 
+## 1.0.10
+
+### Patch Changes
+
+- 583513c: Added not, nand and nor operators
+
 ## 1.0.9
 
 ### Patch Changes
