@@ -1,5 +1,5 @@
 import { describe, expect, test } from 'vitest';
-import { toDateTime } from './utils.js';
+import { toDateTime, toDuration } from './utils.js';
 
 describe('utils', () => {
   describe('toDateTime', () => {
@@ -25,6 +25,31 @@ describe('utils', () => {
     test('negative cases', () => {
       expect(toDateTime([1691629840655])).toBeNull();
       expect(toDateTime('f00 bar')).toBeNull();
+    });
+  });
+
+  describe('toDuration', () => {
+    test('positive cases', () => {
+      expect(toDuration(145)?.toMillis()).toBe(145);
+      expect(toDuration('PT5S')?.toMillis()).toBe(5000);
+      expect(toDuration('PT5M')?.toMillis()).toBe(300000);
+      expect(
+        toDuration({
+          seconds: 40,
+        })?.toMillis(),
+      ).toBe(40000);
+      expect(toDuration([5, 'secs'])?.toMillis()).toBe(5000);
+      expect(toDuration([5, 'Min'])?.toMillis()).toBe(300000);
+      expect(toDuration([5, 'hOUrs'])?.toMillis()).toBe(18000000);
+      expect(toDuration([5, 'day'])?.toMillis()).toBe(432000000);
+      expect(toDuration([5, 'WEEK'])?.toMillis()).toBe(3024000000);
+    });
+
+    test('negative cases', () => {
+      expect(toDuration([1691629840655])).toBeNull();
+      expect(toDuration('f00 bar')).toBeNull();
+      expect(toDuration([5, 4, 'secs'])).toBeNull();
+      expect(toDuration([5, 'month'])).toBeNull();
     });
   });
 });
