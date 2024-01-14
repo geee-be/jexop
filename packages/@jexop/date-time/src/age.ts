@@ -4,12 +4,12 @@ import { toDateTime, toDuration } from './utils.js';
 
 const ageComparisonOperator =
   (comparison: (value: DateTime, duration: Duration) => boolean): Operator<boolean> =>
-  ({ timestamp, age }) => {
-    const dateTime = toDateTime(timestamp);
-    const duration = toDuration(age);
-    if (dateTime === null || duration === null) return null;
+  ({ timestamp, duration }) => {
+    const cleanedTimestamp = toDateTime(timestamp);
+    const cleanedDuration = toDuration(duration);
+    if (cleanedTimestamp === null || cleanedDuration === null) return null;
 
-    return comparison(dateTime, duration);
+    return comparison(cleanedTimestamp, cleanedDuration);
   };
 
 export const beforePast = ageComparisonOperator((value, duration) => value < DateTime.now().minus(duration));
