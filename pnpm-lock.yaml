@@ -59,7 +59,7 @@ importers:
   packages/@jexop/color:
     dependencies:
       '@jexop/core':
-        specifier: workspace:1.0.8
+        specifier: workspace:1.0.10
         version: link:../core
       chroma-js:
         specifier: ^2.4.2
@@ -88,15 +88,15 @@ importers:
   packages/@jexop/date-time:
     dependencies:
       '@jexop/core':
-        specifier: workspace:1.0.8
+        specifier: workspace:1.0.10
         version: link:../core
-      luxon:
-        specifier: ^3.4.0
-        version: 3.4.4
     devDependencies:
       '@types/luxon':
         specifier: 3.3.1
         version: 3.3.1
+      luxon:
+        specifier: ^3.4.0
+        version: 3.4.4
       vitest:
         specifier: ^0.34.1
         version: 0.34.1
@@ -2447,7 +2447,7 @@ packages:
   /luxon@3.4.4:
     resolution: {integrity: sha512-zobTr7akeGHnv7eBOXcRgMeCP6+uyYsczwmeRCauvpvaAltgNyTbLH/+VaEAPUeWBT+1GuNmz4wC/6jtQzbbVA==}
     engines: {node: '>=12'}
-    dev: false
+    dev: true
 
   /magic-string@0.30.2:
     resolution: {integrity: sha512-lNZdu7pewtq/ZvWUp9Wpf/x7WzMTsR26TWV03BRZrXFsv+BI6dy8RAiKgm1uM/kyR0rCfUcqvOlXKG66KhIGug==}
