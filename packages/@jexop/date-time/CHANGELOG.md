@@ -1,5 +1,11 @@
 # @jexop/date-time
 
+## 1.0.12
+
+### Patch Changes
+
+- 6771e5f: Rename age operators
+
 ## 1.0.11
 
 ### Patch Changes
