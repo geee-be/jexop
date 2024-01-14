@@ -23,11 +23,14 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@jexop/core": "workspace:1.0.9",
-    "luxon": "^3.4.0"
+    "@jexop/core": "workspace:1.0.9"
   },
   "devDependencies": {
     "@types/luxon": "3.3.1",
+    "luxon": "^3.4.0",
     "vitest": "^0.34.1"
+  },
+  "peerDependencies": {
+    "luxon": ">=3.4.0"
   }
 }
