@@ -1,5 +1,5 @@
 import { Operator } from '@jexop/core';
-import { DateTime, Duration } from 'luxon';
+import { DateTime, type Duration } from 'luxon';
 import { toDateTime, toDuration } from './utils.js';
 
 const ageComparisonOperator =
