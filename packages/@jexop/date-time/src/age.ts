@@ -1,4 +1,4 @@
-import { Operator } from '@jexop/core';
+import type { Operator } from '@jexop/core';
 import { DateTime, type Duration } from 'luxon';
 import { toDateTime, toDuration } from './utils.js';
 
