@@ -1,5 +1,12 @@
 # @jexop/date-time
 
+## 1.0.11
+
+### Patch Changes
+
+- 3466a9a: Added some age based operators
+- 0377563: Fix linting
+
 ## 1.0.10
 
 ### Patch Changes
