@@ -45,7 +45,14 @@ export const evaluateRegistry = (registry: Map<string, Operator>, expression: un
     // mapped array
     if (op === 'array:map') {
       const { items, to } = args as { items: unknown; to: unknown };
-      if (!items || !Array.isArray(items)) return null;
+      if (!items) return null;
+
+      if (!Array.isArray(items)) {
+        const evaluatedItems = evaluateRegistry(registry, items, { context });
+
+        if (!evaluatedItems || !Array.isArray(evaluatedItems)) return null;
+        return evaluatedItems.map((item: unknown, index) => evaluateRegistry(registry, to, { context, item, index }));
+      }
 
       return items.map((item: unknown, index) => evaluateRegistry(registry, to, { context, item, index }));
     }
