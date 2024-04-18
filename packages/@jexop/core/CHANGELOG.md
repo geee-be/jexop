@@ -1,5 +1,11 @@
 # @jexop/core
 
+## 1.0.11
+
+### Patch Changes
+
+- 325a903: Evaluate child of array:map
+
 ## 1.0.10
 
 ### Patch Changes
