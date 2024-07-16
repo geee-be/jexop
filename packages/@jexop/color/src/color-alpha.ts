@@ -7,7 +7,7 @@ export const alphaOperator: Operator<string> = ({ color, opacity }) => {
 
   const setColor: chroma.Color = isString(color) || isNumber(color) ? chroma(color) : chroma('#000000');
 
-  const alphaColor = chroma(setColor).alpha(opacity);
-  return setColor.hex();
-
+  const alphaColor = chroma(setColor).alpha(alpha);
+  return alphaColor.hex();
 };
+
