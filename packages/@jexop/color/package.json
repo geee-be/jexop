@@ -1,7 +1,7 @@
 {
 	"author": "Greg Bacchus",
 	"dependencies": {
-		"@jexop/core": "workspace:1.0.11",
+		"@jexop/core": "workspace:1.0.12",
 		"@types/chroma-js": "^2.4.0",
 		"chroma-js": "^2.4.2"
 	},
@@ -29,5 +29,5 @@
 	},
 	"type": "module",
 	"types": "src/index.ts",
-	"version": "1.0.11"
+	"version": "1.0.12"
 }
