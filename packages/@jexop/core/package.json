@@ -1,33 +1,33 @@
 {
-  "name": "@jexop/core",
-  "version": "1.0.11",
-  "description": "Evaluate expressions with operators that are represented purely JSON objects",
-  "keywords": [],
-  "license": "MIT",
-  "author": "Greg Bacchus",
-  "type": "module",
-  "exports": {
-    "types": "./src/index.ts",
-    "require": "./dist/cjs/index.cjs",
-    "import": "./dist/esm/index.mjs"
-  },
-  "main": "dist/amd/index.js",
-  "types": "src/index.ts",
-  "scripts": {
-    "build": "rimraf dist/*; tsc -b ./tsconfig.amd.json ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.umd.json && mv dist/cjs/index.js dist/cjs/index.cjs && mv dist/esm/index.js dist/esm/index.mjs;",
-    "build:docs": "pnpx md-aggregate ./INTRO.md ./src/operators/array/README.md ./src/operators/boolean/README.md ./src/operators/branch/README.md ./src/operators/equality/README.md ./src/operators/numeric/README.md ./src/operators/object/README.md > README.md",
-    "lint": "npm run lint:eslint && npm run lint:types && npm run lint:unused-exports",
-    "lint:eslint": "eslint src/ --ext .ts,.tsx",
-    "lint:types": "tsc --noEmit",
-    "lint:unused-exports": "ts-unused-exports tsconfig.json --excludePathsFromReport=src/index.ts",
-    "start:dev": "rimraf dist/*; tsc --watch",
-    "test": "vitest"
-  },
-  "dependencies": {
-    "lodash": "^4.17.21"
-  },
-  "devDependencies": {
-    "@types/lodash": "^4.14.196",
-    "vitest": "^0.34.1"
-  }
+	"name": "@jexop/core",
+	"version": "1.0.11",
+	"description": "Evaluate expressions with operators that are represented purely JSON objects",
+	"keywords": [],
+	"license": "MIT",
+	"author": "Greg Bacchus",
+	"type": "module",
+	"exports": {
+		"types": "./src/index.ts",
+		"require": "./dist/cjs/index.cjs",
+		"import": "./dist/esm/index.mjs"
+	},
+	"main": "dist/amd/index.js",
+	"types": "src/index.ts",
+	"scripts": {
+		"build": "rimraf dist/*; tsc -b ./tsconfig.amd.json ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.umd.json && mv dist/cjs/index.js dist/cjs/index.cjs && mv dist/esm/index.js dist/esm/index.mjs;",
+		"build:docs": "pnpx md-aggregate ./INTRO.md ./src/operators/array/README.md ./src/operators/boolean/README.md ./src/operators/branch/README.md ./src/operators/equality/README.md ./src/operators/numeric/README.md ./src/operators/object/README.md > README.md",
+		"lint": "npm run lint:eslint && npm run lint:types && npm run lint:unused-exports",
+		"lint:eslint": "eslint src/ --ext .ts,.tsx",
+		"lint:types": "tsc --noEmit",
+		"lint:unused-exports": "ts-unused-exports tsconfig.json --excludePathsFromReport=src/index.ts",
+		"start:dev": "rimraf dist/*; tsc --watch",
+		"test": "vitest"
+	},
+	"dependencies": {
+		"@types/lodash": "^4.14.196",
+		"lodash": "^4.17.21"
+	},
+	"devDependencies": {
+		"vitest": "^0.34.1"
+	}
 }
