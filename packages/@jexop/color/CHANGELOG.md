@@ -1,5 +1,13 @@
 # @jexop/color
 
+## 1.0.12
+
+### Patch Changes
+
+- 0f94137: Add types to dependencies
+- Updated dependencies [0f94137]
+  - @jexop/core@1.0.12
+
 ## 1.0.11
 
 ### Patch Changes

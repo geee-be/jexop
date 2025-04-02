@@ -1,5 +1,11 @@
 # @jexop/core
 
+## 1.0.12
+
+### Patch Changes
+
+- 0f94137: Add types to dependencies
+
 ## 1.0.11
 
 ### Patch Changes
