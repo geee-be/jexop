@@ -117,8 +117,8 @@ Divides one number by another.
 
 | Property | Description |
 | -------- | ----------- |
-| `left`   | Dividend    |
-| `right`  | Divisor     |
+| `a`   | Dividend    |
+| `b`  | Divisor     |
 
 Computes `left` ÷ `right`
 
@@ -128,8 +128,8 @@ Examples
 // returns 5
 {
   "op": "divide",
-  "left": 10,
-  "right": 2
+  "a": 10,
+  "b": 2
 }
 ```
 
@@ -137,12 +137,12 @@ Examples
 // returns 5
 {
   "op": "/",
-  "left": {
+  "a": {
     "op": "divide",
     "left": 100,
     "right": 2
   },
-  "right": 10
+  "b": 10
 }
 ```
 
@@ -180,12 +180,12 @@ Examples
 // returns 2000
 {
   "op": "*",
-  "left": {
+  "a": {
     "op": "multiply",
-    "left": 100,
-    "right": 2
+    "a": 100,
+    "b": 2
   },
-  "right": 10
+  "b": 10
 }
 ```
 
