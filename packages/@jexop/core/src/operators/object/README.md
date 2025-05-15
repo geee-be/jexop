@@ -184,3 +184,39 @@ Examples
   }
 }
 ```
+
+## `object:transform`
+
+| Property | Description                                                                 |
+| -------- | --------------------------------------------------------------------------- |
+| `object` | Object whose entries (key-value pairs) will be transformed                   |
+| `to`     | Object to evaluate for each entry, with additional `key` and `value` in context |
+
+### Behavior
+
+- Iterates over each key-value pair of the provided `object`.
+- For each entry, evaluates the `to` expression.
+- During evaluation, adds `key` and `value` to the context.
+- Returns a new object with the same keys, where each value is the result of the evaluated `to` expression.
+
+### Example
+
+```jsonc
+// returns { "a": 10, "b": 20, "c": 30 }
+{
+  "op": "object:transform",
+  "object": {
+    "a": 1,
+    "b": 2,
+    "c": 3
+  },
+  "to": {
+    "op": "*",
+    "left": {
+      "op": "context",
+      "path": "value"
+    },
+    "right": 10
+  }
+}
+```
