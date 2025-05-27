@@ -56,7 +56,7 @@ export const evaluateRegistry = (registry: Map<string, Operator>, expression: un
 
       return items.map((item: unknown, index) => evaluateRegistry(registry, to, { context, item, index }));
     }
-    // tranformed ovject
+    // tranformed object
     if (op === 'object:transform') {
       const { object: obj, to } = args as { object: unknown; to: unknown };
       if (!obj || typeof obj !== 'object' || Array.isArray(obj)) return null;
