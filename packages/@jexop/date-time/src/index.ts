@@ -1,4 +1,3 @@
-
 import { afterFuture, afterPast, ageOperator, beforeFuture, beforePast } from './age.js';
 import { nowOperator } from './now.js';
 import { toDurationOperator } from './to-duration.js';
