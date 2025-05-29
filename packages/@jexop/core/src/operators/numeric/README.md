@@ -117,10 +117,10 @@ Divides one number by another.
 
 | Property | Description |
 | -------- | ----------- |
-| `left`   | Dividend    |
-| `right`  | Divisor     |
+| `a`      | Dividend    |
+| `b`      | Divisor     |
 
-Computes `left` ÷ `right`
+Computes `a` ÷ `b`
 
 Examples
 
@@ -128,8 +128,8 @@ Examples
 // returns 5
 {
   "op": "divide",
-  "left": 10,
-  "right": 2
+  "a": 10,
+  "b": 2
 }
 ```
 
@@ -137,12 +137,12 @@ Examples
 // returns 5
 {
   "op": "/",
-  "left": {
+  "a": {
     "op": "divide",
-    "left": 100,
-    "right": 2
+    "a": 100,
+    "b": 2
   },
-  "right": 10
+  "b": 10
 }
 ```
 
@@ -160,10 +160,10 @@ Multiplies two numbers.
 
 | Property | Description  |
 | -------- | ------------ |
-| `left`   | Multiplier   |
-| `right`  | Multiplicand |
+| `a`      | Multiplier   |
+| `b`      | Multiplicand |
 
-Computes `left` × `right`
+Computes `a` × `b`
 
 Examples
 
@@ -171,8 +171,8 @@ Examples
 // returns 20
 {
   "op": "multiply",
-  "left": 10,
-  "right": 2
+  "a": 10,
+  "b": 2
 }
 ```
 
