@@ -1,33 +1,35 @@
 {
-	"author": "Greg Bacchus",
-	"dependencies": {
-		"@jexop/core": "workspace:1.0.12",
-		"@types/chroma-js": "^2.4.0",
-		"chroma-js": "^2.4.2"
-	},
+	"name": "@jexop/color",
+	"version": "1.0.12",
 	"description": "",
-	"devDependencies": {
-		"vitest": "^0.34.1"
-	},
+	"keywords": [],
+	"license": "MIT",
+	"author": "Greg Bacchus",
+	"type": "module",
 	"exports": {
 		"import": "./dist/esm/index.mjs",
 		"require": "./dist/cjs/index.cjs",
 		"types": "./src/index.ts"
 	},
-	"keywords": [],
-	"license": "MIT",
 	"main": "dist/amd/index.js",
-	"name": "@jexop/color",
+	"types": "src/index.ts",
 	"scripts": {
 		"build": "rimraf dist/*; tsc -b ./tsconfig.amd.json ./tsconfig.cjs.json ./tsconfig.esm.json ./tsconfig.umd.json && mv dist/cjs/index.js dist/cjs/index.cjs && mv dist/esm/index.js dist/esm/index.mjs;",
 		"build:docs": "pnpx md-aggregate ./INTRO.md ./src/README.md > README.md",
-		"lint": "npm run lint:eslint && npm run lint:types && npm run lint:unused-exports",
+		"lint": "pnpm run lint:biome && pnpm run lint:eslint && pnpm run lint:types && pnpm run lint:unused-exports",
+		"lint:biome": "biome ci src/",
+		"lint:biome:fix": "biome check src/ --apply",
 		"lint:eslint": "eslint src/ --ext .ts,.tsx",
 		"lint:types": "tsc --noEmit",
 		"lint:unused-exports": "ts-unused-exports tsconfig.json --excludePathsFromReport=src/index.ts",
 		"start:dev": "rimraf dist/*; tsc --watch"
 	},
-	"type": "module",
-	"types": "src/index.ts",
-	"version": "1.0.12"
+	"dependencies": {
+		"@jexop/core": "workspace:1.0.12",
+		"@types/chroma-js": "^2.4.0",
+		"chroma-js": "^2.4.2"
+	},
+	"devDependencies": {
+		"vitest": "^0.34.1"
+	}
 }
