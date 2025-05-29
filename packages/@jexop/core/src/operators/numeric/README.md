@@ -180,12 +180,12 @@ Examples
 // returns 2000
 {
   "op": "*",
-  "left": {
+  "a": {
     "op": "multiply",
-    "left": 100,
-    "right": 2
+    "a": 100,
+    "b": 2
   },
-  "right": 10
+  "b": 10
 }
 ```
 

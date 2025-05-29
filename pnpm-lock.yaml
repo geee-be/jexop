@@ -63,7 +63,7 @@ importers:
   packages/@jexop/color:
     dependencies:
       '@jexop/core':
-        specifier: workspace:1.0.11
+        specifier: workspace:1.0.12
         version: link:../core
       '@types/chroma-js':
         specifier: ^2.4.0
@@ -92,7 +92,7 @@ importers:
   packages/@jexop/date-time:
     dependencies:
       '@jexop/core':
-        specifier: workspace:1.0.11
+        specifier: workspace:1.0.12
         version: link:../core
     devDependencies:
       '@types/luxon':

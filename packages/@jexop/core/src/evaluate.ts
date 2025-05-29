@@ -56,6 +56,21 @@ export const evaluateRegistry = (registry: Map<string, Operator>, expression: un
 
       return items.map((item: unknown, index) => evaluateRegistry(registry, to, { context, item, index }));
     }
+    // tranformed object
+    if (op === 'object:transform') {
+      const { object: obj, to } = args as { object: unknown; to: unknown };
+      if (!obj || typeof obj !== 'object' || Array.isArray(obj)) return null;
+
+      const evaluatedObj = evaluateRegistry(registry, obj, { context });
+
+      if (!evaluatedObj || typeof evaluatedObj !== 'object' || Array.isArray(evaluatedObj)) return null;
+
+      const result: Record<string, unknown> = {};
+      for (const [key, value] of Object.entries(evaluatedObj)) {
+        result[key] = evaluateRegistry(registry, to, { context, key, value });
+      }
+      return result;
+    }
 
     const fn = registry.get(op);
     // implicit literal - operator not supported
