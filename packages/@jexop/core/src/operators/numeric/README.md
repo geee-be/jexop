@@ -118,7 +118,7 @@ Divides one number by another.
 | Property | Description |
 | -------- | ----------- |
 | `left`   | Dividend    |
-| `left`  | Divisor     |
+| `right`  | Divisor     |
 
 Computes `left` ÷ `right`
 
