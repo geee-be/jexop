@@ -212,11 +212,11 @@ Examples
   },
   "to": {
     "op": "*",
-    "left": {
+    "a": {
       "op": "context",
       "path": "value"
     },
-    "right": 10
+    "b": 10
   }
 }
 ```
