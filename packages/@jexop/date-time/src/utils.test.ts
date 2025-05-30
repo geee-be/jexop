@@ -7,8 +7,12 @@ describe('utils', () => {
       const date = new Date(1691629840655);
       expect(toDateTime(date)?.toMillis()).toBe(1691629840655);
       expect(toDateTime(1691629840655)?.toMillis()).toBe(1691629840655);
-      expect(toDateTime('2023-08-10T13:10:40.655+12:00')?.toMillis()).toBe(1691629840655);
-      expect(toDateTime('2023-08-10T01:10:40.655Z')?.toMillis()).toBe(1691629840655);
+      expect(toDateTime('2023-08-10T13:10:40.655+12:00')?.toMillis()).toBe(
+        1691629840655,
+      );
+      expect(toDateTime('2023-08-10T01:10:40.655Z')?.toMillis()).toBe(
+        1691629840655,
+      );
       expect(
         toDateTime({
           year: 2023,

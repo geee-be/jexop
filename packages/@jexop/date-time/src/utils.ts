@@ -1,6 +1,7 @@
 import { DateTime, Duration } from 'luxon';
 
-const fixDateTime = (value: DateTime): DateTime | null => (value.isValid ? value : null);
+const fixDateTime = (value: DateTime): DateTime | null =>
+  value.isValid ? value : null;
 
 export const toDateTime = (value: unknown): DateTime | null => {
   if (!value) return null;
@@ -9,11 +10,13 @@ export const toDateTime = (value: unknown): DateTime | null => {
   if (typeof value === 'number') return fixDateTime(DateTime.fromMillis(value));
   if (typeof value === 'string') return fixDateTime(DateTime.fromISO(value));
   if (Array.isArray(value)) return null;
-  if (typeof value === 'object') return fixDateTime(DateTime.fromObject(value, { zone: 'UTC' }));
+  if (typeof value === 'object')
+    return fixDateTime(DateTime.fromObject(value, { zone: 'UTC' }));
   return null;
 };
 
-const fixDuration = (value: Duration): Duration | null => (value.isValid ? value : null);
+const fixDuration = (value: Duration): Duration | null =>
+  value.isValid ? value : null;
 
 export const toDuration = (value: unknown): Duration | null => {
   if (!value) return null;

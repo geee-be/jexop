@@ -5,9 +5,9 @@ export const colorAlphaOperator: Operator<string> = ({ color, opacity }) => {
   const alpha = toNumber(opacity);
   if (alpha === null) return null;
 
-  const setColor: chroma.Color = isString(color) || isNumber(color) ? chroma(color) : chroma('#000000');
+  const setColor: chroma.Color =
+    isString(color) || isNumber(color) ? chroma(color) : chroma('#000000');
 
   const alphaColor = chroma(setColor).alpha(alpha);
   return alphaColor.hex();
 };
-
