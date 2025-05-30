@@ -1,5 +1,11 @@
 # @jexop/core
 
+## 1.1.0
+
+### Minor Changes
+
+- a07bdfc: Addition of new 'object:transform' operator and 'to-duration' operator
+
 ## 1.0.12
 
 ### Patch Changes
