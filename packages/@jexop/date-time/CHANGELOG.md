@@ -1,5 +1,16 @@
 # @jexop/date-time
 
+## 1.1.0
+
+### Minor Changes
+
+- a07bdfc: Addition of new 'object:transform' operator and 'to-duration' operator
+
+### Patch Changes
+
+- Updated dependencies [a07bdfc]
+  - @jexop/core@1.1.0
+
 ## 1.0.14
 
 ### Patch Changes

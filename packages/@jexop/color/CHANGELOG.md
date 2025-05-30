@@ -1,5 +1,12 @@
 # @jexop/color
 
+## 1.0.13
+
+### Patch Changes
+
+- Updated dependencies [a07bdfc]
+  - @jexop/core@1.1.0
+
 ## 1.0.12
 
 ### Patch Changes

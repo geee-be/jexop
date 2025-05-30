@@ -1,6 +1,6 @@
 {
   "name": "@jexop/date-time",
-  "version": "1.0.14",
+  "version": "1.1.0",
   "description": "",
   "keywords": [],
   "license": "MIT",
@@ -25,7 +25,7 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@jexop/core": "workspace:1.0.12"
+    "@jexop/core": "workspace:1.1.0"
   },
   "devDependencies": {
     "@types/luxon": "3.3.1",
