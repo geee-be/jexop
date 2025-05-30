@@ -8,11 +8,14 @@
     ]
   },
   "formatter": {
+    "enabled": true,
     "indentStyle": "space"
   },
   "javascript": {
     "formatter": {
+      "arrowParentheses": "always",
       "indentStyle": "space",
+      "jsxQuoteStyle": "double",
       "quoteStyle": "single"
     },
     "parser": {
