@@ -1,9 +1,12 @@
 import { operators as defaultOperators } from './operators/index.js';
-import { type Operator } from './types.js';
+import type { Operator } from './types.js';
 import { isPrimitive } from './utils.js';
 
 export class Registry extends Map<string, Operator> {
-  public static from(operators?: Record<string, Operator>, options?: { addDefaults: boolean }): Registry {
+  public static from(
+    operators?: Record<string, Operator>,
+    options?: { addDefaults: boolean },
+  ): Registry {
     const { addDefaults = true } = options ?? {};
     const r = new Registry();
     if (addDefaults) {
@@ -29,11 +32,17 @@ export const registry = new Registry();
 export const evaluate = (expression: unknown, context: object): unknown =>
   evaluateRegistry(registry, expression, context);
 
-export const evaluateRegistry = (registry: Map<string, Operator>, expression: unknown, context: object): unknown => {
+export const evaluateRegistry = (
+  registry: Map<string, Operator>,
+  expression: unknown,
+  context: object,
+): unknown => {
   if (isPrimitive(expression)) return expression;
 
   // array
-  if (Array.isArray(expression)) return expression.map((item) => evaluateRegistry(registry, item, context));
+  if (Array.isArray(expression)) {
+    return expression.map((item) => evaluateRegistry(registry, item, context));
+  }
 
   // object
   if (expression && typeof expression === 'object') {
@@ -41,7 +50,9 @@ export const evaluateRegistry = (registry: Map<string, Operator>, expression: un
     // implicit literal - no operator
     if (typeof op !== 'string') return expression;
     // explicit literal
-    if (op === 'literal') return (expression as { value: unknown }).value ?? null;
+    if (op === 'literal') {
+      return (expression as { value: unknown }).value ?? null;
+    }
     // mapped array
     if (op === 'array:map') {
       const { items, to } = args as { items: unknown; to: unknown };
@@ -51,22 +62,33 @@ export const evaluateRegistry = (registry: Map<string, Operator>, expression: un
         const evaluatedItems = evaluateRegistry(registry, items, { context });
 
         if (!evaluatedItems || !Array.isArray(evaluatedItems)) return null;
-        return evaluatedItems.map((item: unknown, index) => evaluateRegistry(registry, to, { context, item, index }));
+        return evaluatedItems.map((item: unknown, index) =>
+          evaluateRegistry(registry, to, { context, item, index }),
+        );
       }
 
-      return items.map((item: unknown, index) => evaluateRegistry(registry, to, { context, item, index }));
+      return items.map((item: unknown, index) =>
+        evaluateRegistry(registry, to, { context, item, index }),
+      );
     }
-    // tranformed object
+    // transformed object
     if (op === 'object:transform') {
       const { object: obj, to } = args as { object: unknown; to: unknown };
       if (!obj || typeof obj !== 'object' || Array.isArray(obj)) return null;
 
       const evaluatedObj = evaluateRegistry(registry, obj, { context });
 
-      if (!evaluatedObj || typeof evaluatedObj !== 'object' || Array.isArray(evaluatedObj)) return null;
+      if (
+        !evaluatedObj ||
+        typeof evaluatedObj !== 'object' ||
+        Array.isArray(evaluatedObj)
+      ) {
+        return null;
+      }
 
       const result: Record<string, unknown> = {};
-      for (const [key, value] of Object.entries(evaluatedObj)) {
+      const entries = Object.entries(evaluatedObj) as Array<[string, unknown]>;
+      for (const [key, value] of entries) {
         result[key] = evaluateRegistry(registry, to, { context, key, value });
       }
       return result;
@@ -77,7 +99,10 @@ export const evaluateRegistry = (registry: Map<string, Operator>, expression: un
     if (!fn) return expression;
 
     const evaluatedArgs = Object.entries(args).reduce(
-      (acc, entry) => ({ ...acc, [entry[0]]: evaluateRegistry(registry, entry[1], context) }),
+      (acc, entry) => ({
+        ...acc,
+        [entry[0]]: evaluateRegistry(registry, entry[1], context),
+      }),
       {},
     );
     return fn(evaluatedArgs, context);

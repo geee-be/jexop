@@ -10,8 +10,9 @@ export const toDateTime = (value: unknown): DateTime | null => {
   if (typeof value === 'number') return fixDateTime(DateTime.fromMillis(value));
   if (typeof value === 'string') return fixDateTime(DateTime.fromISO(value));
   if (Array.isArray(value)) return null;
-  if (typeof value === 'object')
+  if (typeof value === 'object') {
     return fixDateTime(DateTime.fromObject(value, { zone: 'UTC' }));
+  }
   return null;
 };
 
