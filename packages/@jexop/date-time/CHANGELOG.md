@@ -1,5 +1,11 @@
 # @jexop/date-time
 
+## 1.2.0
+
+### Minor Changes
+
+- 0bc125d: Addition of date bounds operators
+
 ## 1.1.0
 
 ### Minor Changes
