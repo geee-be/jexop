@@ -1,0 +1,7 @@
+---
+'@jexop/color': patch
+'@jexop/core': patch
+'@jexop/date-time': patch
+---
+
+Docs and repo information
