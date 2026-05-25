@@ -1,6 +1,6 @@
 {
   "name": "@jexop/date-time",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "",
   "keywords": [],
   "repository": {
@@ -30,7 +30,7 @@
     "test": "vitest"
   },
   "dependencies": {
-    "@jexop/core": "workspace:1.1.0"
+    "@jexop/core": "workspace:1.1.1"
   },
   "devDependencies": {
     "@types/luxon": "3.3.1",

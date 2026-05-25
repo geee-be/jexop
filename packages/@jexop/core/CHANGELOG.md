@@ -1,5 +1,11 @@
 # @jexop/core
 
+## 1.1.1
+
+### Patch Changes
+
+- fe433ed: Docs and repo information
+
 ## 1.1.0
 
 ### Minor Changes
