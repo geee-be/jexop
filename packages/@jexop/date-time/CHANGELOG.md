@@ -1,5 +1,13 @@
 # @jexop/date-time
 
+## 1.2.1
+
+### Patch Changes
+
+- fe433ed: Docs and repo information
+- Updated dependencies [fe433ed]
+  - @jexop/core@1.1.1
+
 ## 1.2.0
 
 ### Minor Changes
