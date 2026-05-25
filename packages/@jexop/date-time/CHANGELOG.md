@@ -1,5 +1,13 @@
 # @jexop/date-time
 
+## 1.2.2
+
+### Patch Changes
+
+- ebc15f4: Publishing
+- Updated dependencies [ebc15f4]
+  - @jexop/core@1.1.2
+
 ## 1.2.1
 
 ### Patch Changes

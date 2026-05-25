@@ -1,5 +1,13 @@
 # @jexop/color
 
+## 1.0.15
+
+### Patch Changes
+
+- ebc15f4: Publishing
+- Updated dependencies [ebc15f4]
+  - @jexop/core@1.1.2
+
 ## 1.0.14
 
 ### Patch Changes
