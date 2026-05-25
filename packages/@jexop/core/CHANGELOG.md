@@ -1,5 +1,11 @@
 # @jexop/core
 
+## 1.1.2
+
+### Patch Changes
+
+- ebc15f4: Publishing
+
 ## 1.1.1
 
 ### Patch Changes
