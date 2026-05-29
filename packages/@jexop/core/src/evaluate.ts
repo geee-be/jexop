@@ -25,6 +25,10 @@ export class Registry extends Map<string, Operator> {
   public addDefaults(): void {
     this.add(defaultOperators);
   }
+
+  public evaluate(expression: unknown, context: object): unknown {
+    return evaluateRegistry(this, expression, context);
+  }
 }
 
 export const registry = new Registry();

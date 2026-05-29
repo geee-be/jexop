@@ -83,6 +83,22 @@ const expression = {
 const result = evaluate(expression); // result will be false
 ```
 
+### Non-singleton Usage
+
+If you need isolated registries — for example, in tests or when running multiple independent configurations — you can instantiate `Registry` directly instead of using the shared singleton:
+
+```typescript
+import { Registry } from '@jexop/core';
+
+const registry = new Registry();
+registry.addDefaults();
+
+// optionally add custom operators
+registry.set('is', ({ a, b }) => a === b);
+
+const result = registry.evaluate(expression, context);
+```
+
 ## Operators
 
 The `@jexop/core` package provides many basic operators by default. These operators cover common use cases and provide a good starting point for most applications.
