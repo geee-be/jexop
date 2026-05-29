@@ -19,7 +19,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout Repo
-        uses: actions/checkout@v3
+        uses: actions/checkout@v6
 
       - name: Setup Node.js 24.x
         uses: actions/setup-node@v6
@@ -56,8 +56,8 @@ jobs:
         id: changesets
         uses: changesets/action@v1
         with:
-          commit: 'bot: prepare update changeset'
-          title: 'bot: publish update'
+          commit: "bot: prepare update changeset"
+          title: "bot: publish update"
           publish: pnpm changeset publish
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
