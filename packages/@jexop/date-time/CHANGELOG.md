@@ -1,5 +1,11 @@
 # @jexop/date-time
 
+## 1.2.3
+
+### Patch Changes
+
+- dfa2b07: Read me
+
 ## 1.2.2
 
 ### Patch Changes
