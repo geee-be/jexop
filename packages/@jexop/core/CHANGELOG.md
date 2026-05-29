@@ -1,5 +1,11 @@
 # @jexop/core
 
+## 1.1.3
+
+### Patch Changes
+
+- 1211bcf: Non-singleton use
+
 ## 1.1.2
 
 ### Patch Changes
